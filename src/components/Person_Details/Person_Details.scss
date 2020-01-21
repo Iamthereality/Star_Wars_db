@@ -1,0 +1,24 @@
+img {
+    margin: 35px 40px;
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    transition: all 0.2s;
+    object-fit: cover;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+}
+
+ul {
+    margin: 35px 40px;
+
+    li {
+
+        .term {
+            color: #09D3AC;
+        }
+    }
+}

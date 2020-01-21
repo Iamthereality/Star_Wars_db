@@ -1,0 +1,63 @@
+.toggle_random_planet {
+    outline: none !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    width: 60px;
+    height: 100%;
+    background-color: #303030;
+    transition: all 0.2s;
+
+    &:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+
+    span {
+        height: 100%;
+        word-wrap: unset;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        color: #09d3ac;
+        font-size: 18px;
+        transition: all 0.2s;
+        padding-left: 16.5px;
+        padding-right: 16.5px;
+
+        &:hover {
+            padding-top: 10px;
+        }
+
+        &:active {
+            padding-top: 30px;
+        }
+    }
+}
+
+.in_list {
+    top: 20px;
+    height: 60px !important;
+    width: 321px;
+
+    span {
+        width: 100% !important;
+        padding-left: 0;
+        padding-right: 0;
+        writing-mode: horizontal-tb;
+        transform: rotate(90deg);
+
+        &:hover {
+            padding-left: 10px;
+        }
+
+        &:active {
+            padding-left: 30px;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.planet_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: space-between;
+
+    .planet_image {
+        margin: 35px 40px;
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .planet_description {
+        cursor: default;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        h2 {
+            margin: 0 50px;
+        }
+
+        ul {
+            margin: 35px 40px;
+
+            li {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .term {
+        color: #09D3AC;
+    }
+}
