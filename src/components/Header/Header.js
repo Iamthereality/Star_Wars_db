@@ -5,7 +5,7 @@ export default class extends Component {
     buttons = [
         {name: 'planets', label: 'Planets'},
         {name: 'starships', label: 'Starships'},
-        {name: 'persons', label: 'Persons'},
+        {name: 'characters', label: 'Characters'},
     ];
     render() {
         const buttons = this.buttons.map(({ name, label }) => {

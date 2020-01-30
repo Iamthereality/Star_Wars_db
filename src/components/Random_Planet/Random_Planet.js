@@ -19,8 +19,11 @@ export default class extends Component {
 
     componentDidMount() {
         this.update_planet();
-        // this.interval = setInterval(this.update_planet, 20000);
-        // clearInterval(this.interval);
+        this.interval = setInterval(this.update_planet, 20000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
 
     on_planet_loaded = (planet) => {

@@ -11,7 +11,7 @@ export default class extends Component {
                     <img
                         className={ 'planet_image' }
                         src={ url }
-                        alt={ 'there is no such planet' }/>
+                        alt={ '' }/>
 
                     <div className="planet_description">
                         <h2 className={ 'term' }> { name }</h2>

@@ -1,3 +1,7 @@
+h2 {
+    color: #09D3AC;
+}
+
 img {
     margin: 35px 40px;
     width: 200px;
@@ -16,6 +20,8 @@ ul {
     margin: 35px 40px;
 
     li {
+        min-width: 250px;
+        width: auto;
 
         .term {
             color: #09D3AC;
