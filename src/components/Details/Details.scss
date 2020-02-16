@@ -1,5 +1,5 @@
 .details {
-    padding: 0;
+    padding: 35px 40px;
     margin-bottom: 0;
     width: 100%;
     min-height: 300px;
@@ -19,5 +19,54 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        h2 {
+            padding: 0 20px;
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    .content {
+        width: 100%;
+
+        .error_message {
+            width: 100%;
+
+            img {
+
+                &:hover {
+                    box-shadow: none;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    .planet {
+        width: 200px;
+        height: 200px;
+    }
+
+    .starship {
+        width: 300px;
+        height: 200px;
+    }
+
+    .person {
+        width: 200px;
+        height: 275px;
+    }
+
+    img {
+        border-radius: 20px;
+        transition: all 0.2s;
+        object-fit: scale-down;
+
+        &:hover {
+            z-index: 10;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
     }
 }

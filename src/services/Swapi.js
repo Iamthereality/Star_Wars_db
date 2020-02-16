@@ -32,12 +32,18 @@ export default class {
 
     get_all_planets = async () => {
         const result = await this.get_data(`/planets/`);
+        // console.log(result);
         return result.results.map(this.#transform_planet_data);
     };
 
     get_planet = async (id) => {
         const planet = await this.get_data(`/planets/${id}`);
         return this.#transform_planet_data(planet);
+    };
+
+    get_starship_img = async (id) => {
+        const query = `${this.#img_url}starships/${id}.jpg`;
+        return await fetch(query);
     };
 
     #transform_starship_data = (starship) => {

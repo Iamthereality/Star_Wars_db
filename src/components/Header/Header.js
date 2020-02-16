@@ -5,12 +5,13 @@ export default class extends Component {
     buttons = [
         {name: 'planets', label: 'Planets'},
         {name: 'starships', label: 'Starships'},
-        {name: 'characters', label: 'Characters'},
+        {name: 'persons', label: 'Characters'},
     ];
     render() {
         const buttons = this.buttons.map(({ name, label }) => {
             return (
                 <button
+                    onClick={ () => this.props.on_category_button_click(name) }
                     key={ name }
                     type={ 'button' }
                     className={ 'navigation_button' }>

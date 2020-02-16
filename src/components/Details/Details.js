@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import './Details.scss';
 
-import Person_Details from "../Person_Details/Person_Details";
+import Item_Details from "../Item_Details/Item_Details";
 import Swapi from "../../services/Swapi";
-import placeholder from "../Planet/Planet_Placeholder.jpg";
+import placeholder from "../Random_Planet_Details/Planet_Placeholder.jpg";
 import Loading_Error from "../Loading_Error/Loading_Error";
 import Spinner from "../Spinner/Spinner";
 
@@ -12,30 +12,30 @@ export default class extends Component {
 
     state = {
         url: null,
-        person: null,
+        item: null,
         loading: null,
         error: false
     };
 
     componentDidMount() {
-        this.update_person();
+        this.update_item_details();
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.person_id !== prevProps.person_id) {
+        if (this.props.item_id !== prevProps.item_id) {
             this.setState({
                loading: true
             });
-            this.update_person();
+            this.update_item_details();
         }
     }
 
-    on_person_loaded = (person) => {
+    on_item_loaded = (item) => {
         this.setState({
-            person,
+            item: item,
             loading: false
         });
-        this.update_person_img();
+        this.update_item_img();
     };
 
     on_error = () => {
@@ -57,34 +57,52 @@ export default class extends Component {
         }
     };
 
-    update_person_img = () => {
-        this.#swapi.get_person_img(this.props.person_id)
-            .then(this.get_img_url);
+    update_item_img = () => {
+        const { category } = this.props;
+        if (category === 'persons') {
+            this.#swapi.get_person_img(this.props.item_id)
+                .then(this.get_img_url);
+        } else if (category === 'planets') {
+            this.#swapi.get_planet_img(this.props.item_id)
+                .then(this.get_img_url);
+        } else if (category === 'starships') {
+            this.#swapi.get_starship_img(this.props.item_id)
+                .then(this.get_img_url);
+        }
     };
 
-    update_person = () => {
-        if (!this.props.person_id) {
+    update_item_details = () => {
+        if (!this.props.item_id) {
             return;
         }
-
-        this.#swapi.get_person(this.props.person_id)
-            .then(this.on_person_loaded)
-            .catch(this.on_error);
-
+        const { category } = this.props;
+        if (category === 'persons') {
+            this.#swapi.get_person(this.props.item_id)
+                .then(this.on_item_loaded)
+                .catch(this.on_error);
+        } else if (category === 'planets') {
+            this.#swapi.get_planet(this.props.item_id)
+                .then(this.on_item_loaded)
+                .catch(this.on_error);
+        } else if (category === 'starships') {
+            this.#swapi.get_starship(this.props.item_id)
+                .then(this.on_item_loaded)
+                .catch(this.on_error);
+        }
     };
 
     render() {
-        const { url, person, loading, error } = this.state;
-        const has_data = !(loading || error) && person;
+        const { url, item, loading, error } = this.state;
+        const has_data = !(loading || error) && item;
         const error_message = error ? <Loading_Error/> : null;
         const spinner = loading ? <div className={ `message` }><Spinner/></div>  : null;
-        const person_details = has_data ? <Person_Details person={ person } url={ url }/> : null;
-        const select_person = !loading && !error && !person ? <div className={ `message` }><h2>Select a person from the list</h2></div> : null;
+        const item_details = has_data ? <Item_Details item={ item } url={ url } category={ this.props.category } item_selected={ this.props.item_selected }/> : null;
+        const start_message = !loading && !error && !item ? <div className={ `message` }><h2>Select the list item or change the category</h2></div> : null;
 
         return(
             <div className="details jumbotron rounded">
-                { select_person }
-                { person_details }
+                { start_message }
+                { item_details }
                 { spinner }
                 { error_message }
             </div>

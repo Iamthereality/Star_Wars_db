@@ -46,13 +46,14 @@
     width: 321px;
 
     span {
-        width: 100% !important;
-        padding-left: 0;
-        padding-right: 0;
+        display: inherit;
+        width: 100%;
+        padding: 16.5px 0;
         writing-mode: horizontal-tb;
-        transform: rotate(90deg);
+        transform: rotate(0deg);
 
         &:hover {
+            padding-top: 16.5px;
             padding-left: 10px;
         }
 

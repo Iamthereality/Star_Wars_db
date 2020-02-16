@@ -2,6 +2,29 @@
 
 * {
     font-family: 'Roboto', sans-serif;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: #09D3AC;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        cursor: pointer;
+        background: #09AB8C;
+    }
+}
+
+body {
+    user-select: none;
 }
 
 .container {
@@ -28,15 +51,27 @@
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
+        height: auto;
 
         .left_part {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
             padding-right: 10px;
             width: 30%;
+            min-height: 300px;
+            height: auto;
         }
 
         .right_part {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             padding-left: 10px;
             width: 70%;
+            height: 450px;
         }
     }
 }

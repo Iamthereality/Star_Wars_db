@@ -6,20 +6,20 @@ import Toggle_Random_Planet from "../Toggle_Random_Planet/Toggle_Random_Planet";
 import Random_Planet from '../Random_Planet/Random_Planet';
 import Item_List from "../Item_List/Item_List";
 import Details from "../Details/Details";
-import Planet_Details from '../Planet_Details/Planet_Details';
-import Starship_Details from '../Starship_Details/Starship_Details';
-import Person_Details from '../Person_Details/Person_Details';
-import Loading_Error from "../Loading_Error/Loading_Error";
+import Item_List_Controls from "../Item_List_Controls/Item_List_Controls";
 
 export default class extends Component {
     state = {
         show_random_planet: true,
-        person_id: null
+        category: 'planets',
+        item_id: null,
+        item_selected: false
     };
 
-    on_person_selected = (id) => {
+    on_item_selected = (id) => {
         this.setState({
-            person_id: id,
+            item_id: id,
+            item_selected: true
         });
     };
 
@@ -33,15 +33,21 @@ export default class extends Component {
                 show_random_planet: true
             });
         }
+    };
 
+    on_category_button_click = (name) => {
+       this.setState({
+           category: name,
+           item_selected: false
+       });
     };
 
     render() {
-        const { show_random_planet } =this.state;
+        const { show_random_planet, category } =this.state;
         const random_planet = show_random_planet ? <Random_Planet/> : null;
         return(
             <>
-                <Header />
+                <Header on_category_button_click={ this.on_category_button_click }/>
                 <div className={ 'container' }>
                     <div className="upper_section">
                         <Toggle_Random_Planet
@@ -52,11 +58,13 @@ export default class extends Component {
                     <div className="bottom_section">
                         <div className="left_part">
                             <Item_List
-                                on_item_selected={ this.on_person_selected }
-                                planet_state={ show_random_planet }/>
+                                on_item_selected={ this.on_item_selected }
+                                random_planet_state={ show_random_planet }
+                                category={ category }/>
                         </div>
                         <div className="right_part">
-                            <Details person_id={ this.state.person_id }/>
+                            <Details item_id={ this.state.item_id } category={ this.state.category } item_selected={ this.state.item_selected }/>
+                            <Item_List_Controls />
                         </div>
                     </div>
                 </div>

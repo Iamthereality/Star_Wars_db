@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './Planet.scss';
+import './Random_Planet_Details.scss';
 
 export default class extends Component {
     render() {
