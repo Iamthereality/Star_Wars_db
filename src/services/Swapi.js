@@ -31,9 +31,19 @@ export default class {
     };
 
     get_all_planets = async () => {
-        const result = await this.get_data(`/planets/`);
-        // console.log(result);
-        return result.results.map(this.#transform_planet_data);
+        const request = await this.get_data(`/planets/`);
+        const result = [];
+        let result_length = request.count / 10;
+        if (result_length % 2 > 0) {
+            result_length = Math.floor(result_length) + 1;
+        }
+        for (let i = 0; i < result_length; i++) {
+            const temp_result = await this.get_data(`/planets/?page=${i+1}`);
+            temp_result.results.forEach((item) => {
+                result.push(item);
+            });
+        }
+        return result.map(this.#transform_planet_data);
     };
 
     get_planet = async (id) => {
@@ -61,8 +71,19 @@ export default class {
     };
 
     get_all_starships = async () => {
-        const result = await this.get_data(`/starships/`);
-        return result.results.map(this.#transform_starship_data);
+        const request = await this.get_data(`/starships/`);
+        const result = [];
+        let result_length = request.count / 10;
+        if (result_length % 2 > 0) {
+            result_length = Math.floor(result_length) + 1;
+        }
+        for (let i = 0; i < result_length; i++) {
+            const temp_result = await this.get_data(`/starships/?page=${i+1}`);
+            temp_result.results.forEach((item) => {
+                result.push(item);
+            });
+        }
+        return result.map(this.#transform_starship_data);
     };
 
     get_starship = async (id) => {
@@ -86,8 +107,19 @@ export default class {
     };
 
     get_all_persons = async () => {
-        const result = await this.get_data(`/people/`);
-        return result.results.map(this.#transform_person_data);
+        const request = await this.get_data(`/people/`);
+        const result = [];
+        let result_length = request.count / 10;
+        if (result_length % 2 > 0) {
+            result_length = Math.floor(result_length) + 1;
+        }
+        for (let i = 0; i < result_length; i++) {
+            const temp_result = await this.get_data(`/people/?page=${i+1}`);
+            temp_result.results.forEach((item) => {
+                result.push(item);
+            });
+        }
+        return result.map(this.#transform_person_data);
     };
 
     get_person = async (id) => {

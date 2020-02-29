@@ -7,7 +7,6 @@
         width: 10px;
     }
 
-
     ::-webkit-scrollbar-track {
         background: transparent;
     }
@@ -33,8 +32,6 @@ body {
     align-items: center;
 
     .upper_section {
-        margin-top: 20px;
-        margin-bottom: 20px;
         width: 100%;
         height: auto;
         position: relative;
@@ -45,13 +42,17 @@ body {
     }
 
     .bottom_section {
-        margin: 0 0 20px 0;
+        margin: 20px 0 20px 0;
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
         height: auto;
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
 
         .left_part {
             display: flex;
@@ -61,7 +62,13 @@ body {
             padding-right: 10px;
             width: 30%;
             min-height: 300px;
-            height: auto;
+            height: 450px;
+
+            ::-webkit-scrollbar-track {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background: transparent;
+            }
         }
 
         .right_part {
@@ -74,4 +81,12 @@ body {
             height: 450px;
         }
     }
+}
+
+.bottom_moved {
+    margin-top: 0 !important;
+}
+
+.moved {
+    height: 440px !important;
 }

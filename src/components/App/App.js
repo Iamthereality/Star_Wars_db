@@ -6,7 +6,6 @@ import Toggle_Random_Planet from "../Toggle_Random_Planet/Toggle_Random_Planet";
 import Random_Planet from '../Random_Planet/Random_Planet';
 import Item_List from "../Item_List/Item_List";
 import Details from "../Details/Details";
-import Item_List_Controls from "../Item_List_Controls/Item_List_Controls";
 
 export default class extends Component {
     state = {
@@ -43,8 +42,11 @@ export default class extends Component {
     };
 
     render() {
-        const { show_random_planet, category } =this.state;
+        const { show_random_planet, category } = this.state;
         const random_planet = show_random_planet ? <Random_Planet/> : null;
+        const right_part = show_random_planet ? 'right_part' : 'right_part moved';
+        const left_part = show_random_planet ? 'left_part' : 'left_part moved';
+        const bottom_section = show_random_planet ? 'bottom_section' : 'bottom_section bottom_moved';
         return(
             <>
                 <Header on_category_button_click={ this.on_category_button_click }/>
@@ -55,16 +57,15 @@ export default class extends Component {
                             planet_state={ show_random_planet }/>
                         { random_planet }
                     </div>
-                    <div className="bottom_section">
-                        <div className="left_part">
+                    <div className={ bottom_section }>
+                        <div className={ left_part }>
                             <Item_List
                                 on_item_selected={ this.on_item_selected }
                                 random_planet_state={ show_random_planet }
                                 category={ category }/>
                         </div>
-                        <div className="right_part">
+                        <div className={ right_part }>
                             <Details item_id={ this.state.item_id } category={ this.state.category } item_selected={ this.state.item_selected }/>
-                            <Item_List_Controls />
                         </div>
                     </div>
                 </div>
