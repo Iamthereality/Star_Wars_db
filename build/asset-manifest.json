@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.07419114.chunk.css",
-    "main.js": "/static/js/main.dcc2daa6.chunk.js",
-    "main.js.map": "/static/js/main.dcc2daa6.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6d47da0e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6d47da0e.js.map",
-    "static/js/2.aefdfc0f.chunk.js": "/static/js/2.aefdfc0f.chunk.js",
-    "static/js/2.aefdfc0f.chunk.js.map": "/static/js/2.aefdfc0f.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6e1e0b4cdc9b31ac099f8b7a043b6c10.js": "/precache-manifest.6e1e0b4cdc9b31ac099f8b7a043b6c10.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.07419114.chunk.css.map": "/static/css/main.07419114.chunk.css.map",
-    "static/js/2.aefdfc0f.chunk.js.LICENSE": "/static/js/2.aefdfc0f.chunk.js.LICENSE",
-    "static/media/Planet_Placeholder.jpg": "/static/media/Planet_Placeholder.2c7d2081.jpg"
+    "main.css": "/Star_Wars_db/static/css/main.07419114.chunk.css",
+    "main.js": "/Star_Wars_db/static/js/main.dcc2daa6.chunk.js",
+    "main.js.map": "/Star_Wars_db/static/js/main.dcc2daa6.chunk.js.map",
+    "runtime-main.js": "/Star_Wars_db/static/js/runtime-main.bc4a6649.js",
+    "runtime-main.js.map": "/Star_Wars_db/static/js/runtime-main.bc4a6649.js.map",
+    "static/js/2.aefdfc0f.chunk.js": "/Star_Wars_db/static/js/2.aefdfc0f.chunk.js",
+    "static/js/2.aefdfc0f.chunk.js.map": "/Star_Wars_db/static/js/2.aefdfc0f.chunk.js.map",
+    "index.html": "/Star_Wars_db/index.html",
+    "precache-manifest.0e3da272151990958f6af315d5ed9ef3.js": "/Star_Wars_db/precache-manifest.0e3da272151990958f6af315d5ed9ef3.js",
+    "service-worker.js": "/Star_Wars_db/service-worker.js",
+    "static/css/main.07419114.chunk.css.map": "/Star_Wars_db/static/css/main.07419114.chunk.css.map",
+    "static/js/2.aefdfc0f.chunk.js.LICENSE": "/Star_Wars_db/static/js/2.aefdfc0f.chunk.js.LICENSE",
+    "static/media/Planet_Placeholder.jpg": "/Star_Wars_db/static/media/Planet_Placeholder.2c7d2081.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6d47da0e.js",
+    "static/js/runtime-main.bc4a6649.js",
     "static/js/2.aefdfc0f.chunk.js",
     "static/css/main.07419114.chunk.css",
     "static/js/main.dcc2daa6.chunk.js"
