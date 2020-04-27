@@ -2,8 +2,13 @@
     z-index: 0;
 
     h2 {
-        margin: 0 15px 30px 15px;
+        text-align: center;
+        margin: 0 0 20px 0;
         color: #09D3AC;
+
+        @media (max-width: 991px) {
+            font-size: 30px;
+        }
     }
 
     height: 100%;
@@ -28,5 +33,11 @@
                 color: #09D3AC;
             }
         }
+    }
+
+    @media (max-width: 991px) {
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 }

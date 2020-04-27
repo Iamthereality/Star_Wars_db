@@ -38,27 +38,33 @@
             padding-top: 30px;
         }
     }
-}
 
-.in_list {
-    top: 0;
-    height: 60px !important;
-    width: 321px;
+    &.in_list {
+        top: 0;
+        height: 60px !important;
+        width: 321px;
 
-    span {
-        display: inherit;
-        width: 100%;
-        padding: 16.5px 0;
-        writing-mode: horizontal-tb;
-        transform: rotate(0deg);
+        span {
+            display: inherit;
+            width: 100%;
+            padding: 16.5px 0;
+            writing-mode: horizontal-tb;
+            transform: rotate(0deg);
 
-        &:hover {
-            padding-top: 16.5px;
-            padding-left: 10px;
+            &:hover {
+                padding-top: 16.5px;
+                padding-left: 10px;
+            }
+
+            &:active {
+                padding-left: 30px;
+            }
         }
 
-        &:active {
-            padding-left: 30px;
+        @media (max-width: 1199px) {
+            width: 264px;
         }
     }
+
 }
+

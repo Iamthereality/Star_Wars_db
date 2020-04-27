@@ -1,5 +1,5 @@
 export default class {
-    #api_base = 'https://swapi.co/api';
+    #api_base = 'https://swapi.dev/api';
     #img_url = `https://starwars-visualguide.com/assets/img/`;
 
     get_data = async (url) => {

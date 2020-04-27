@@ -61,7 +61,7 @@ export default class extends Component {
     };
 
     update_planet = () => {
-        const id = Math.floor(Math.random() * 61) + 1;
+        const id = Math.floor(Math.random() * 59) + 1;
         this.#swapi.get_planet(id)
             .then(this.on_planet_loaded)
             .catch(this.on_error);

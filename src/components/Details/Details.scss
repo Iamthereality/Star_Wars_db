@@ -44,29 +44,62 @@
     }
 
     .planet {
+        min-width: 200px;
         width: 200px;
+        min-height: 200px;
         height: 200px;
     }
 
     .starship {
+        min-width: 300px;
         width: 300px;
+        min-height: 200px;
         height: 200px;
+
+        @media (max-width: 1199px) {
+            min-width: 250px;
+            width: 250px;
+            min-height: 160px;
+            height: 160px;
+        }
     }
 
     .person {
+        min-width: 200px;
         width: 200px;
+        min-height: 275px;
         height: 275px;
+
+        @media (max-width: 991px) {
+            min-width: 175px;
+            width: 175px;
+            min-height: 200px;
+            height: 200px;
+        }
     }
 
     img {
         border-radius: 20px;
         transition: all 0.2s;
-        object-fit: scale-down;
+        object-fit: cover;
 
         &:hover {
             z-index: 10;
             transform: scale(1.1);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
         }
+
+        @media (max-width: 991px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        padding: 30px 35px;
+    }
+
+    @media (max-width: 991px) {
+        height: 100%;
+        flex-direction: column;
     }
 }

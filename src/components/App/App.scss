@@ -5,6 +5,7 @@
 
     ::-webkit-scrollbar {
         width: 10px;
+        height: 10px;
     }
 
     ::-webkit-scrollbar-track {
@@ -22,8 +23,14 @@
     }
 }
 
-body {
+html, body {
     user-select: none;
+    overflow-x: hidden !important;
+}
+
+body {
+    margin-top: 100px;
+    padding-top: 20px;
 }
 
 .container {
@@ -52,6 +59,7 @@ body {
 
         ::-webkit-scrollbar {
             width: 5px;
+            height: 5px;
         }
 
         .left_part {
@@ -69,6 +77,11 @@ body {
                 margin-bottom: 20px;
                 background: transparent;
             }
+            
+            @media (max-width: 991px) {
+                height: 500px;
+                width: 40%;
+            }
         }
 
         .right_part {
@@ -79,6 +92,11 @@ body {
             padding-left: 10px;
             width: 70%;
             height: 450px;
+
+            @media (max-width: 991px) {
+                height: 500px;
+                width: 60%;
+            }
         }
     }
 }
