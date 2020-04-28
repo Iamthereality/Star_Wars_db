@@ -3,24 +3,24 @@
 * {
     font-family: 'Roboto', sans-serif;
 
-    ::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-    }
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
 
-    ::-webkit-scrollbar-track {
-        background: transparent;
-    }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
 
-    ::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        background: #09D3AC;
-    }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: #09D3AC;
+        }
 
-    ::-webkit-scrollbar-thumb:hover {
-        cursor: pointer;
-        background: #09AB8C;
-    }
+        ::-webkit-scrollbar-thumb:hover {
+            cursor: pointer;
+            background: #09AB8C;
+        }
 }
 
 html, body {
@@ -62,6 +62,7 @@ body {
             height: 5px;
         }
 
+
         .left_part {
             display: flex;
             flex-direction: row;
@@ -73,14 +74,20 @@ body {
             height: 450px;
 
             ::-webkit-scrollbar-track {
-                margin-top: 20px;
-                margin-bottom: 20px;
-                background: transparent;
+                margin: 20px 0;
             }
-            
+
             @media (max-width: 991px) {
                 height: 500px;
                 width: 40%;
+            }
+
+            @media (max-width: 575px) {
+                min-height: 230px;
+                height: 230px !important;
+                width: 100%;
+                padding: 0;
+                margin-bottom: 20px;
             }
         }
 
@@ -97,12 +104,27 @@ body {
                 height: 500px;
                 width: 60%;
             }
+
+            @media (max-width: 575px) {
+                width: 100%;
+                padding: 0;
+                max-height: 440px;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 575px) {
+            flex-direction: column !important;
         }
     }
 }
 
 .bottom_moved {
     margin-top: 0 !important;
+
+    @media (max-width: 767px) {
+        margin-top: 80px !important;
+    }
 }
 
 .moved {

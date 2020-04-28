@@ -24,10 +24,10 @@
         max-height: 100%;
         height: auto;
         overflow-y: scroll;
-        overflow-x: hidden;
 
         li {
             width: 100%;
+            font-size: 18px;
 
             .term {
                 color: #09D3AC;
@@ -37,7 +37,7 @@
 
     @media (max-width: 991px) {
         width: 100%;
-        overflow-y: scroll;
+
         overflow-x: hidden;
     }
 }

@@ -23,6 +23,10 @@
         @media (max-width: 1199px) {
             margin: 30px 35px;
         }
+
+        @media (max-width: 767px) {
+            margin: 0 20px;
+        }
     }
 
     .planet_description {
@@ -48,7 +52,7 @@
         }
 
         @media (max-width: 991px) {
-            padding-right: 0px;
+            padding-right: 0;
             flex-direction: column;
 
             h2 {
@@ -59,9 +63,29 @@
                 margin-bottom: 30px;
             }
         }
+
+        @media (max-width: 767px) {
+            padding-right: 20px;
+
+            h2 {
+                margin: 20px 0;
+            }
+
+            ul {
+                margin-bottom: 20px;
+            }
+        }
     }
 
     .term {
         color: #09D3AC;
+    }
+
+    @media (max-width: 575px) {
+        flex-direction: column;
+
+        .planet_image {
+            margin-top: 20px;
+        }
     }
 }
