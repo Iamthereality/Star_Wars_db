@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Star_Wars_db/static/css/main.a7df6515.chunk.css",
+    "main.css": "/Star_Wars_db/static/css/main.0ffc1a4e.chunk.css",
     "main.js": "/Star_Wars_db/static/js/main.c84c7c26.chunk.js",
     "main.js.map": "/Star_Wars_db/static/js/main.c84c7c26.chunk.js.map",
     "runtime-main.js": "/Star_Wars_db/static/js/runtime-main.22fca5db.js",
@@ -8,16 +8,16 @@
     "static/js/2.b6b60d51.chunk.js": "/Star_Wars_db/static/js/2.b6b60d51.chunk.js",
     "static/js/2.b6b60d51.chunk.js.map": "/Star_Wars_db/static/js/2.b6b60d51.chunk.js.map",
     "index.html": "/Star_Wars_db/index.html",
-    "precache-manifest.b0c8218b6de23fe5a931b25c33bd46b2.js": "/Star_Wars_db/precache-manifest.b0c8218b6de23fe5a931b25c33bd46b2.js",
+    "precache-manifest.5c0fd914d9d2b34f2f5d998570431798.js": "/Star_Wars_db/precache-manifest.5c0fd914d9d2b34f2f5d998570431798.js",
     "service-worker.js": "/Star_Wars_db/service-worker.js",
-    "static/css/main.a7df6515.chunk.css.map": "/Star_Wars_db/static/css/main.a7df6515.chunk.css.map",
+    "static/css/main.0ffc1a4e.chunk.css.map": "/Star_Wars_db/static/css/main.0ffc1a4e.chunk.css.map",
     "static/js/2.b6b60d51.chunk.js.LICENSE.txt": "/Star_Wars_db/static/js/2.b6b60d51.chunk.js.LICENSE.txt",
     "static/media/Planet_Placeholder.jpg": "/Star_Wars_db/static/media/Planet_Placeholder.2c7d2081.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.22fca5db.js",
     "static/js/2.b6b60d51.chunk.js",
-    "static/css/main.a7df6515.chunk.css",
+    "static/css/main.0ffc1a4e.chunk.css",
     "static/js/main.c84c7c26.chunk.js"
   ]
 }
